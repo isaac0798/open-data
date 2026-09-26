@@ -1,0 +1,9 @@
+services:
+  py:
+    build: ./setup
+    working_dir: /work
+    environment:
+      DATA_DIR: /data
+    volumes:
+      - ../data:/data:ro   # the StatsBomb JSON, read-only
+      - .:/work            # this questions/ folder, so edits show up without rebuilding
