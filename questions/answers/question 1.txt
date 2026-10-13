@@ -1,0 +1,3 @@
+QUESTION 1 - expected answer
+
+a) 3961   b) 24   c) 867

@@ -1,0 +1,5 @@
+QUESTION 4: Which competition has the most goals per match?
+
+  For each competition (all seasons together), work out the average number of
+  goals per match. Only include competitions with at least 50 matches.
+  Show the top 5.
