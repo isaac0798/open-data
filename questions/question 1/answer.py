@@ -28,7 +28,16 @@ def answer(conn):
     la_liga_competition_id = cur.execute("""SELECT competition_id FROM competitions WHERE competition_name = "La Liga" """)
     total_laliga_matches = cur.execute(f'SELECT COUNT(*) FROM matches WHERE competition_id = {la_liga_competition_id.fetchone()[0]}')
     print(total_laliga_matches.fetchall())
-
+    
+    total_laliga_matches_ij = cur.execute("""
+      SELECT COUNT(*)
+      FROM matches
+      INNER JOIN competitions
+        ON matches.competition_id = competitions.competition_id
+        AND matches.season_id = competitions.season_id
+      WHERE competitions.competition_name = 'La Liga' """)
+    print(total_laliga_matches_ij.fetchall())
+    
     pass
 
 
