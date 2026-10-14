@@ -14,13 +14,21 @@ DB_PATH = Path(__file__).resolve().parent.parent / "db" / "statsbomb.db"
 
 def get_connection():
     """Connect to the database and return the connection."""
-    # TODO
-    pass
+    con = sqlite3.connect(DB_PATH)
+    
+    return con
 
 
 def answer(conn):
     """Print the 5 matches with the largest goal difference."""
-    # TODO
+    cur = conn.cursor()
+    
+    top_5_matches = cur.execute("""SELECT
+        match_date, home_team_name, away_team_name, abs(home_score - away_score), home_score, away_score
+        FROM matches ORDER BY abs(home_score - away_score) DESC LIMIT 5
+    """)
+    for match in top_5_matches:
+        print(f'{match[0]} {match[1]} {match[4]} - {match[5]} {match[2]}')
     pass
 
 
