@@ -1,5 +1,7 @@
 QUESTION 1: How big is the database?
 
+  New keywords: SELECT, COUNT, WHERE, INNER JOIN
+
   a) How many matches are there in total?
   b) How many different competitions are there? (not competition + season, just names)
   c) How many La Liga matches are there?

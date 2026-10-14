@@ -1,4 +1,6 @@
 QUESTION 3: Which competition seasons have the most matches?
 
+  New keyword: GROUP BY
+
   List the 5 competition seasons with the most matches,
   e.g. "La Liga 2015/2016 - 380 matches".

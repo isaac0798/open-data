@@ -1,3 +1,5 @@
 QUESTION 5: Which players appear in the most lineups?
 
+  New keyword: COUNT(DISTINCT ...)
+
   Find the 10 players who appear in the most match squads, as a numbered list.

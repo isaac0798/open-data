@@ -1,0 +1,8 @@
+QUESTION 10: Which teams played each other both home and away in the same season?
+
+  New keyword: self-join
+
+  Using a self-join on matches (one copy for the home fixture, one for the
+  reverse away fixture), find team pairs within the same competition season
+  who played each other twice, once at each team's home ground. List the two
+  team names and the season.

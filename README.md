@@ -2,6 +2,10 @@
 
 Learning Python + SQL by answering questions about the StatsBomb open data in `data/`.
 
+Each `question N/question.txt` names the new SQL keyword(s) it introduces.
+See `questions/CONCEPTS.md` for all questions grouped by concept (joins,
+`GROUP BY`, subqueries, etc.).
+
 Everything for this lives in the `questions/` folder. **All commands below are run from `questions/`:**
 
 ```bash

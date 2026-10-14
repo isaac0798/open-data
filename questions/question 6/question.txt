@@ -1,0 +1,8 @@
+QUESTION 6: How clinical are teams in front of goal?
+
+  New keyword: CASE WHEN
+
+  Using the events table, classify each shot as a goal or not a goal with a
+  CASE expression (shot_outcome = 'Goal'). Then print the total number of
+  shots, the total number of goals, and the conversion rate (goals / shots)
+  as a percentage.

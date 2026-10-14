@@ -1,0 +1,7 @@
+QUESTION 8: Are there any competition seasons with no matches recorded?
+
+  New keyword: LEFT JOIN
+
+  Using a LEFT JOIN from competitions to matches (instead of the INNER JOIN
+  from question 1), find any competition + season combinations with zero
+  matches. Print them, or print that there aren't any.

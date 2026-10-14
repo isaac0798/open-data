@@ -14,13 +14,27 @@ DB_PATH = Path(__file__).resolve().parent.parent / "db" / "statsbomb.db"
 
 def get_connection():
     """Connect to the database and return the connection."""
-    # TODO
-    pass
+    con = sqlite3.connect(DB_PATH)
+    
+    return con
 
 
 def answer(conn):
     """Print the 5 competition seasons with the most matches."""
-    # TODO
+    cur = conn.cursor()
+    
+    res = cur.execute("""
+        SELECT competition_name, season_name, competition_name + season_name AS comp_season 
+        from competitions
+        INNER JOIN matches
+            ON competitions.competition_id = matches.competition_id
+            AND competitions.season_id = matches.season_id
+            ORDER BY comp_season DESC
+            LIMIT 5
+    """)
+    
+    for result in res.fetchall():
+        print(result)
     pass
 
 

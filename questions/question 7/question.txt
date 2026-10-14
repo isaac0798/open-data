@@ -1,0 +1,7 @@
+QUESTION 7: Which matches were especially high-scoring?
+
+  New keyword: subquery
+
+  Work out the average number of goals per match across the whole database.
+  Then, using that average as a subquery, count how many matches had more
+  total goals (home_score + away_score) than that average.

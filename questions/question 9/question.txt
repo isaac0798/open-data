@@ -1,0 +1,7 @@
+QUESTION 9: Who is the top scorer in each competition?
+
+  New keyword: window function (RANK or ROW_NUMBER, with PARTITION BY)
+
+  For each competition (all seasons together), rank players by total goals
+  scored using a window function, then print just the #1 ranked player for
+  every competition.

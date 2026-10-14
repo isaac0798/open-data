@@ -1,4 +1,6 @@
 QUESTION 2: What was the biggest win?
 
+  New keywords: ORDER BY, LIMIT
+
   Find the 5 matches with the largest goal difference. Show the date, both
   team names, and the score.
