@@ -1,0 +1,4 @@
+QUESTION 13: Which stadium has hosted the most matches for a single competition?
+
+  Find the top 5 stadium + competition pairs by number of matches held there,
+  e.g. "Camp Nou - La Liga - 190 matches".

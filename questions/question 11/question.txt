@@ -1,0 +1,5 @@
+QUESTION 11: Which competition has produced the most goals overall?
+
+  For each competition (all seasons combined), work out the total number of
+  goals scored across all its matches (home_score + away_score added up).
+  Show the top 5.
