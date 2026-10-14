@@ -23,15 +23,17 @@ def answer(conn):
     """Print the 5 competition seasons with the most matches."""
     cur = conn.cursor()
     
-    res = cur.execute("""
-        SELECT competition_name, season_name, competition_name + season_name AS comp_season 
-        from competitions
+    res = cur.execute("""              
+        SELECT competition_name, season_name, COUNT(*) AS total_matches
+        FROM competitions
         INNER JOIN matches
-            ON competitions.competition_id = matches.competition_id
-            AND competitions.season_id = matches.season_id
-            ORDER BY comp_season DESC
-            LIMIT 5
+            on matches.competition_id = competitions.competition_id
+            AND matches.season_id = competitions.season_id
+        GROUP BY competitions.competition_id, competitions.season_id
+        ORDER BY total_matches DESC
+        LIMIT 5
     """)
+    
     
     for result in res.fetchall():
         print(result)
